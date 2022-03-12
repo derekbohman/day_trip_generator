@@ -23,6 +23,14 @@ def restaurants_randomizer(restaurants):
     restaurant_result = random.choice(restaurants)
     return restaurant_result
 
+def trip_summary():
+    print("Here is a summary of your trip:")
+    print("    Destination: " + destination_result)
+    print("    Entertainment: " + entertainment_result)
+    print("    Mode of transportation: " + mode_of_transportation_result)
+    print("    Restaurant: " + restaurant_result)
+    print("")
+
 destination_result = destinations_randomizer(destinations)
 entertainment_result = entertainments_randomizer(entertainments)
 mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
@@ -97,18 +105,21 @@ print("Congratulations. We have completed generating your day trip.")
 print("")
 print("Now, let's confirm that this is the trip you want.")
 print("")
-print("The trip that we have generated for you is:")
-print("Destination: " + destination_result)
-print("Entertainment: " + entertainment_result)
-print("Mode of transportation: " + mode_of_transportation_result)
-print("Restaurant: " + restaurant_result)
+print("Here is a summary of your trip:")
+print("    Destination: " + destination_result)
+print("    Entertainment: " + entertainment_result)
+print("    Mode of transportation: " + mode_of_transportation_result)
+print("    Restaurant: " + restaurant_result)
 print("")
 
-user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes.")
+user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
 
-if user_confirmation == "Yes":
+if user_confirmation == "No":
+    print("We apologize. That's what's going to happen. Have a great trip!")
+
+else:
     print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + \
     " by " + mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
     "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
-else:
-    print("We apologize, but that's what's happening. Have fun!")
+    print("")
+    print("Thank you for using the devCodeCamp Day Trip Planner")
