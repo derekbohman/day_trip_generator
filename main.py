@@ -1,5 +1,6 @@
 #This is going to be tough. You've got this.
 
+from platform import java_ver
 import random
 
 destinations = ["Germany", "Iceland", "Italy", "Norway", "Sweden"]
@@ -35,10 +36,14 @@ destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
 while destination_choice != "Yes":
     destination_result = destination_randomizer(destinations)
+    print("")
     print("We're sorry. How about " + destination_result + " ?")
+    print("")
     destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
+    print("")
     print("Congratulations on choosing your destination. Let's move on.")
+    print("")
 
 print("")
 print("We have selected " + entertainment_result + " as your entertainment.")
@@ -46,10 +51,14 @@ print("")
 entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
 while entertainment_choice != "Yes":
+    print("")
     print("We're sorry. How about " + entertainment_result + " ?")
+    print("")
     entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
+    print("")
     print("Congratulations on choosing your entertainment. Let's move on.")
+    print("")
 
 print("")
 print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
@@ -57,10 +66,14 @@ print("")
 mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
 while mode_of_transportation_choice != "Yes":
+    print("")
     print("We're sorry. How about " + mode_of_transportation_result + " ?")
+    print("")
     mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
+    print("")
     print("Congratulations on choosing your mode of transportation. Let's move on.")
+    print("")
 
 print("")
 print("We have selected " + restaurant_result + " as your dining option.")
@@ -68,7 +81,11 @@ print("")
 restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
 while restaurant_choice != "Yes":
+    print("")
     print("We're sorry. How about " + restaurant_result + " ?")
+    print("")
     restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
+    print("")
     print("Congratulations on choosing your dining option. Let's move on.")
+    print("")
