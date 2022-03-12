@@ -118,6 +118,7 @@ if user_confirmation == "No":
     print("We apologize. That's what's going to happen. Have a great trip!")
 
 else:
+    print("")
     print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + \
     " by " + mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
     "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
