@@ -130,7 +130,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("Congratulations on choosing your destination. Let's move on.")
                 print("")
 
-        elif user_correction == 2:
+        elif user_correction == "2":
             print("")
             print("We have selected " + entertainment_result + " as your entertainment.")
             print("")
@@ -147,7 +147,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("Congratulations on choosing your entertainment. Let's move on.")
                 print("")
 
-        elif user_correction == 3:
+        elif user_correction == "3":
             print("")
             print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
             print("")
@@ -164,7 +164,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("Congratulations on choosing your mode of transportation. Let's move on.")
                 print("")
 
-        elif user_correction == 4:
+        elif user_correction == "4":
             print("")
             print("We have selected " + restaurant_result + " as your destination.")
             print("")
