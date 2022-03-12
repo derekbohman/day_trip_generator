@@ -2,3 +2,4 @@
 
 destinations = ["Italy", "Iceland", "Norway", "New Zealand"]
 entertainments = ["Museum", "Show", "Explore", "Relax"]
+mode_of_transportations = ["Plane", "Boat"]
