@@ -106,7 +106,7 @@ print("    Mode of transportation: " + mode_of_transportation_result)
 print("    Restaurant: " + restaurant_result)
 print("")
 
-def user_confirmation_function():
+def user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result):
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
     if user_confirmation == "No":
         print("")
@@ -192,7 +192,7 @@ def user_confirmation_function():
         print("    Mode of transportation: " + mode_of_transportation_result)
         print("    Restaurant: " + restaurant_result)
         print("")
-        user_confirmation_function()
+        user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
 
     else:
         print("")
@@ -201,4 +201,20 @@ def user_confirmation_function():
         "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
-user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
+        return [destination_result, entertainment_result, mode_of_transportation_result, restaurant_result]
+final_results = user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
+
+print(destination_result)
+print(entertainment_result)
+print(mode_of_transportation_result)
+print(restaurant_result)
+
+destination_result = final_results[0]
+entertainment_result = final_results[1]
+mode_of_transportation_result = final_results[2]
+restaurant_result = final_results[3]
+
+print(destination_result)
+print(entertainment_result)
+print(mode_of_transportation_result)
+print(restaurant_result)
