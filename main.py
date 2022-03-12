@@ -23,21 +23,15 @@ def restaurants_randomizer(restaurants):
     restaurant_result = random.choice(restaurants)
     return restaurant_result
 
-def trip_summary():
-    print("Here is a summary of your trip:")
-    print("    Destination: " + destination_result)
-    print("    Entertainment: " + entertainment_result)
-    print("    Mode of transportation: " + mode_of_transportation_result)
-    print("    Restaurant: " + restaurant_result)
-    print("")
-
 destination_result = destinations_randomizer(destinations)
 entertainment_result = entertainments_randomizer(entertainments)
 mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
 restaurant_result = restaurants_randomizer(restaurants)
 
 print("")
-print("Welcome to the devCodeCamp Day Trip Generator. We have selected " + destination_result + " as your destination.")
+print("Welcome to the devCodeCamp Day Trip Generator.")
+print("")
+print("We have selected " + destination_result + " as your destination.")
 print("")
 destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
@@ -115,7 +109,77 @@ print("")
 user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
 
 if user_confirmation == "No":
-    print("We apologize. That's what's going to happen. Have a great trip!")
+    print("")
+    user_correction = input("Which option would you like to change? You can type in \
+    '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant.")
+
+    if user_correction == "1":
+        print("")
+        print("We have selected " + destination_result + " as your destination.")
+        print("")
+        destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+        while destination_choice != "Yes":
+            destination_result = destinations_randomizer(destinations)
+            print("")
+            print("We're sorry. How about " + destination_result + " ?")
+            print("")
+            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        else:
+            print("")
+            print("Congratulations on choosing your destination. Let's move on.")
+            print("")
+
+    elif user_correction == 2:
+        print("")
+        print("We have selected " + destination_result + " as your destination.")
+        print("")
+        destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+        while destination_choice != "Yes":
+            destination_result = destinations_randomizer(destinations)
+            print("")
+            print("We're sorry. How about " + destination_result + " ?")
+            print("")
+            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        else:
+            print("")
+            print("Congratulations on choosing your destination. Let's move on.")
+            print("")
+
+    elif user_correction == 3:
+        print("")
+        print("We have selected " + destination_result + " as your destination.")
+        print("")
+        destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+        while destination_choice != "Yes":
+            destination_result = destinations_randomizer(destinations)
+            print("")
+            print("We're sorry. How about " + destination_result + " ?")
+            print("")
+            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        else:
+            print("")
+            print("Congratulations on choosing your destination. Let's move on.")
+            print("")
+
+    elif user_correction == 4:
+        print("")
+        print("We have selected " + destination_result + " as your destination.")
+        print("")
+        destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+        while destination_choice != "Yes":
+            destination_result = destinations_randomizer(destinations)
+            print("")
+            print("We're sorry. How about " + destination_result + " ?")
+            print("")
+            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        else:
+            print("")
+            print("Congratulations on choosing your destination. Let's move on.")
+            print("")
 
 else:
     print("")
