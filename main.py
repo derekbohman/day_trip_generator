@@ -1,6 +1,5 @@
 #This is going to be tough. You've got this.
 
-from platform import java_ver
 import random
 
 destinations = ["Germany", "Iceland", "Italy", "Norway", "Sweden"]
