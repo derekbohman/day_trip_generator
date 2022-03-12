@@ -82,7 +82,7 @@ print("")
 restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
 while restaurant_choice != "Yes":
-    restaurant_choice = restaurants_randomizer(restaurants)
+    restaurant_result = restaurants_randomizer(restaurants)
     print("")
     print("We're sorry. How about " + restaurant_result + " ?")
     print("")
