@@ -2,6 +2,11 @@
 
 import random
 
+destinations = ["Germany", "Iceland", "Italy", "Norway", "Sweden"]
+entertainments = ["Hike", "Museum", "Relax", "Shop", "Theater"]
+modes_of_transportations = ["Boat", "Plane", "Taxi", "Train", "Walk"]
+restaurants = ["Germanic", "Italian", "Scandinavian", "Local Favorite"]
+
 def destination_randomizer(destinations):
     destination_result = random.choice(destinations)
     return destination_result
@@ -18,31 +23,52 @@ def restaurants_randomizer(restaurants):
     restaurant_result = random.choice(restaurants)
     return restaurant_result
 
-destinations = ["Iceland", "Italy", "New Zealand", "Norway"]
-entertainments = ["Explore", "Museum", "Relax", "Show"]
-modes_of_transportations = ["Boat", "Plane"]
-restaurants = ["Italian", "Scandinavian", "Mexican", "Local Favorite"]
-
-mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+destination_result = destination_randomizer(destinations)
+entertainment_result = entertainment_randomizer(entertainments)
+mode_of_transportation_result = mode_of_transportation_randomizer(modes_of_transportations)
+restaurant_result = restaurants_randomizer(restaurants)
 
 print("")
-print("Welcome to the devCodeCamp Day Trip Generator. We have selected " + destination_randomizer + " as your destination.")
+print("Welcome to the devCodeCamp Day Trip Generator. We have selected " + destination_result + " as your destination.")
 print("")
 destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if destination_choice != "Yes":
-    print("We're sorry. How about " + destination_randomizer + " ?")
+while destination_choice != "Yes":
+    destination_result = destination_randomizer(destinations)
+    print("We're sorry. How about " + destination_result + " ?")
     destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
     print("Congratulations on choosing your destination. Let's move on.")
 
 print("")
-print("We have selected " + entertainment_randomizer + " as your entertainment.")
+print("We have selected " + entertainment_result + " as your entertainment.")
 print("")
 entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if entertainment_choice != "Yes":
-    print("We're sorry. How about " + entertainment_randomizer + " ?")
+while entertainment_choice != "Yes":
+    print("We're sorry. How about " + entertainment_result + " ?")
     entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 else:
     print("Congratulations on choosing your entertainment. Let's move on.")
+
+print("")
+print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
+print("")
+mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+while mode_of_transportation_choice != "Yes":
+    print("We're sorry. How about " + mode_of_transportation_result + " ?")
+    mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+else:
+    print("Congratulations on choosing your mode of transportation. Let's move on.")
+
+print("")
+print("We have selected " + restaurant_result + " as your dining option.")
+print("")
+restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
+while restaurant_choice != "Yes":
+    print("We're sorry. How about " + restaurant_result + " ?")
+    restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+else:
+    print("Congratulations on choosing your dining option. Let's move on.")
