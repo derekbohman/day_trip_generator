@@ -1,5 +1,6 @@
 #This is going to be tough. You've got this.
 
-destinations = ["Italy", "Iceland", "Norway", "New Zealand"]
-entertainments = ["Museum", "Show", "Explore", "Relax"]
-mode_of_transportations = ["Plane", "Boat"]
+destinations = ["Iceland", "Italy", "New Zealand", "Norway"]
+entertainments = ["Explore", "Museum", "Relax", "Show"]
+mode_of_transportations = ["Boat", "Plane"]
+restaurants = ["Italian", "Scandinavian", "Mexican", "Local Favorite"]
