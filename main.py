@@ -98,17 +98,17 @@ print("")
 print("Now, let's confirm that this is the trip you want.")
 print("")
 print("The trip that we have generated for you is:")
-print("Destination: " + destination_choice)
-print("Entertainment: " + entertainment_choice)
-print("Mode of transportation: " + mode_of_transportation_choice)
-print("Restaurant: " + restaurant_choice)
+print("Destination: " + destination_result)
+print("Entertainment: " + entertainment_result)
+print("Mode of transportation: " + mode_of_transportation_result)
+print("Restaurant: " + restaurant_result)
 print("")
 
 user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes.")
 
 if user_confirmation == "Yes":
-    print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_choice + \
-    " by " + mode_of_transportation_choice + " where you will spend the day " + entertainment_choice + ". " + \
-    "You will end the day by enjoying a wonderful " + restaurant_choice + " meal.")
+    print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + \
+    " by " + mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
+    "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
 else:
     print("We apologize, but that's what's happening. Have fun!")
