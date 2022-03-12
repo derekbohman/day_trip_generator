@@ -132,53 +132,53 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
 
         elif user_correction == 2:
             print("")
-            print("We have selected " + destination_result + " as your destination.")
+            print("We have selected " + entertainment_result + " as your entertainment.")
             print("")
-            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+            entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if destination_choice != "Yes":
-                destination_result = destinations_randomizer(destinations)
+            if entertainment_result != "Yes":
+                entertainment_result = entertainments_randomizer(entertainments)
                 print("")
-                print("We're sorry. How about " + destination_result + " ?")
+                print("We're sorry. How about " + entertainment_result + " ?")
                 print("")
-                destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
             else:
                 print("")
-                print("Congratulations on choosing your destination. Let's move on.")
+                print("Congratulations on choosing your entertainment. Let's move on.")
                 print("")
 
         elif user_correction == 3:
             print("")
-            print("We have selected " + destination_result + " as your destination.")
+            print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
             print("")
-            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+            mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if destination_choice != "Yes":
-                destination_result = destinations_randomizer(destinations)
+            if mode_of_transportation_result != "Yes":
+                mode_of_transportation_choice = modes_of_transportation_randomizer(modes_of_transportation)
                 print("")
-                print("We're sorry. How about " + destination_result + " ?")
+                print("We're sorry. How about " + mode_of_transportation_result + " ?")
                 print("")
-                destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
             else:
                 print("")
-                print("Congratulations on choosing your destination. Let's move on.")
+                print("Congratulations on choosing your mode of transportation. Let's move on.")
                 print("")
 
         elif user_correction == 4:
             print("")
-            print("We have selected " + destination_result + " as your destination.")
+            print("We have selected " + restaurant_result + " as your destination.")
             print("")
-            destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+            restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if destination_choice != "Yes":
-                destination_result = destinations_randomizer(destinations)
+            if restaurant_choice != "Yes":
+                restaurant_result = restaurants_randomizer(restaurants)
                 print("")
-                print("We're sorry. How about " + destination_result + " ?")
+                print("We're sorry. How about " + restaurant_result + " ?")
                 print("")
-                destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
             else:
                 print("")
-                print("Congratulations on choosing your destination. Let's move on.")
+                print("Congratulations on choosing your restaurant. Let's move on.")
                 print("")
 
         print("")
