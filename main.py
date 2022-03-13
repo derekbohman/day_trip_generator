@@ -23,6 +23,18 @@ def restaurants_randomizer(restaurants):
     restaurant_result = random.choice(restaurants)
     return restaurant_result
 
+def destination_confirmation(destinations_list):
+    destination_result = destinations_randomizer(destinations_list)
+    print("")
+    print("We're sorry. How about " + destination_result + " ?")
+    print("")
+    destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+    if destination_choice == "Yes":
+        return destination_result
+
+    else:
+        destination_confirmation(destinations_list)
+
 destination_result = destinations_randomizer(destinations)
 entertainment_result = entertainments_randomizer(entertainments)
 mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
@@ -106,22 +118,14 @@ print("    Mode of transportation: " + mode_of_transportation_result)
 print("    Restaurant: " + restaurant_result)
 print("")
 
-def begin(x):
-    return x + 1
-
 def user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result):
-    count = begin(0)
-    print(count)
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
-    print(begin(count))
     if user_confirmation == "No":
-        print(begin(count))
         print("")
         user_correction = input("Which option would you like to change? You can type in\
         '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant. ")
 
         if user_correction == "1":
-            print(begin(count))
             destination_result = destinations_randomizer(destinations)
             print("")
             print("We have selected " + destination_result + " as your destination.")
@@ -129,11 +133,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if destination_choice != "Yes":
-                destination_result = destinations_randomizer(destinations)
-                print("")
-                print("We're sorry. How about " + destination_result + " ?")
-                print("")
-                destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                destination_result = destination_confirmation(destinations)
                    
             else:
                 print("")
