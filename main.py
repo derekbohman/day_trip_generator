@@ -113,7 +113,8 @@ def entertainment_choice_function(entertainment_choice):
         else:
             print("")
             print("Congratulations on choosing your entertainment. Let's move on.")
-            print("")    
+            print("")
+            return entertainment_result  
     else:
         print("")
         print("Congratulations on choosing your entertainment. Let's move on.")
@@ -137,7 +138,8 @@ def transportation_choice_function(transportation_choice):
         else:
             print("")
             print("Congratulations on choosing your transportation. Let's move on.")
-            print("")   
+            print("")
+            return transportation_result
     else:
         print("")
         print("Congratulations on choosing your transportation. Let's move on.")
@@ -162,6 +164,7 @@ def restaurant_choice_function(restaurant_choice):
             print("")
             print("Congratulations on choosing your dining option. Let's move on.")
             print("")
+            return restaurant_result
     else:
         print("")
         print("Congratulations on choosing your dining option. Let's move on.")
@@ -262,5 +265,5 @@ def user_confirmation_function(destination_result, entertainment_result, transpo
                 You will end the day by enjoying a wonderful {restaurant_result} meal.")
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
-        #return [destination_result, entertainment_result, transportation_result, restaurant_result]
+        return [destination_result, entertainment_result, transportation_result, restaurant_result]
 confirmed_results = user_confirmation_function(destination_result, entertainment_result, transportation_result, restaurant_result)
