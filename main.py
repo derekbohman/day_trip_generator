@@ -200,25 +200,25 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
 
     else:
         print("")
-        print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + \
-        " by " + mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
-        "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
+        print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + " by " + \
+            mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
+                "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
-        return [destination_result, entertainment_result, mode_of_transportation_result, restaurant_result]
-final_results = user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
+        # return [destination_result, entertainment_result, mode_of_transportation_result, restaurant_result]
+# final_results = user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
 
-print(destination_result)
-print(entertainment_result)
-print(mode_of_transportation_result)
-print(restaurant_result)
+# print(destination_result)
+# print(entertainment_result)
+# print(mode_of_transportation_result)
+# print(restaurant_result)
 
-destination_result = final_results[0]
-entertainment_result = final_results[1]
-mode_of_transportation_result = final_results[2]
-restaurant_result = final_results[3]
+# destination_result = final_results[0]
+# entertainment_result = final_results[1]
+# mode_of_transportation_result = final_results[2]
+# restaurant_result = final_results[3]
 
-print(destination_result)
-print(entertainment_result)
-print(mode_of_transportation_result)
-print(restaurant_result)
+# print(destination_result)
+# print(entertainment_result)
+# print(mode_of_transportation_result)
+# print(restaurant_result)
