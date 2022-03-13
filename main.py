@@ -77,77 +77,97 @@ print(f"We have selected {destination_result} as your destination.")
 print("")
 destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if destination_choice != "Yes":
-    destination_result = destinations_randomizer(destinations_list)
-    print("")
-    print(f"We're sorry. How about {destination_result}?")
-    print("")
-    destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
-else:
-    print("")
-    print("Congratulations on choosing your destination. Let's move on.")
-    print("")
+def destination_choice_function(destination_choice):
+    if destination_choice != "Yes":
+        destination_result = destinations_randomizer(destinations_list)
+        print("")
+        print(f"We're sorry. How about {destination_result}?")
+        print("")
+        destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        if destination_choice != "Yes":
+            destination_choice_function(destination_choice)
+        else:
+            print("")
+            print("Congratulations on choosing your destination. Let's move on.")
+            print("")
+    else:
+        print("")
+        print("Congratulations on choosing your destination. Let's move on.")
+        print("")
+destination_choice = destination_choice_function(destination_choice)
 
-print("")
-print("Congratulations on choosing your destination. Let's move on.")
-print("")
 print("")
 print("We have selected " + entertainment_result + " as your entertainment.")
 print("")
 entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if entertainment_choice != "Yes":
-    entertainment_result = entertainments_randomizer(entertainments_list)
-    print("")
-    print("We're sorry. How about " + entertainment_result + " ?")
-    print("")
-    entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
-else:
-    print("")
-    print("Congratulations on choosing your entertainment. Let's move on.")
-    print("")
+def entertainment_choice_function(entertainment_choice):
+    if entertainment_choice != "Yes":
+        entertainment_result = entertainments_randomizer(entertainments_list)
+        print("")
+        print(f"We're sorry. How about {entertainment_result}?")
+        print("")
+        entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        if entertainment_choice != "Yes":
+            entertainment_choice_function(entertainment_choice)
+        else:
+            print("")
+            print("Congratulations on choosing your entertainment. Let's move on.")
+            print("")    
+    else:
+        print("")
+        print("Congratulations on choosing your entertainment. Let's move on.")
+        print("")
+entertainment_choice = entertainment_choice_function(entertainment_choice)
 
-print("")
-print("Congratulations on choosing your entertainment. Let's move on.")
-print("")
 print("")
 print("We have selected " + transportation_result + " as your transportation.")
 print("")
 transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if transportation_choice != "Yes":
-    transportation_result = transportations_randomizer(transportations_list)
-    print("")
-    print("We're sorry. How about " + transportation_result + " ?")
-    print("")
-    transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
-else:
-    print("")
-    print("Congratulations on choosing your transportation. Let's move on.")
-    print("")
+def transportation_choice_function(transportation_choice):
+    if transportation_choice != "Yes":
+        transportation_result = transportations_randomizer(transportations_list)
+        print("")
+        print("We're sorry. How about " + transportation_result + " ?")
+        print("")
+        transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        if transportation_choice != "Yes":
+            transportation_choice_function(transportation_choice)
+        else:
+            print("")
+            print("Congratulations on choosing your transportation. Let's move on.")
+            print("")   
+    else:
+        print("")
+        print("Congratulations on choosing your transportation. Let's move on.")
+        print("")
+transportation_choice = transportation_choice_function(transportation_choice)
 
-print("")
-print("Congratulations on choosing your transportation. Let's move on.")
-print("")
 print("")
 print("We have selected " + restaurant_result + " as your dining option.")
 print("")
 restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-if restaurant_choice != "Yes":
-    restaurant_result = restaurants_randomizer(restaurants_list)
-    print("")
-    print("We're sorry. How about " + restaurant_result + " ?")
-    print("")
-    restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
-else:
-    print("")
-    print("Congratulations on choosing your dining option. Let's move on.")
-    print("")
+def restaurant_choice_function(restaurant_choice):
+    if restaurant_choice != "Yes":
+        restaurant_result = restaurants_randomizer(restaurants_list)
+        print("")
+        print("We're sorry. How about " + restaurant_result + " ?")
+        print("")
+        restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+        if restaurant_choice != "Yes":
+            restaurant_choice_function(restaurant_choice)
+        else:
+            print("")
+            print("Congratulations on choosing your dining option. Let's move on.")
+            print("")   
+    else:
+        print("")
+        print("Congratulations on choosing your dining option. Let's move on.")
+        print("")
+restaurant_choice = restaurant_choice_function(restaurant_choice)
 
-print("")
-print("Congratulations on choosing your dining option. Let's move on.")
-print("")
 print("")
 print("Congratulations. We have completed generating your day trip.")
 print("")
