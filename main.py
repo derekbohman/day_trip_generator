@@ -23,17 +23,18 @@ def restaurants_randomizer(restaurants):
     restaurant_result = random.choice(restaurants)
     return restaurant_result
 
-def destination_confirmation(destinations_list):
-    destination_result = destinations_randomizer(destinations_list)
+def destination_confirmation(destinations):
+    destination_result = destinations_randomizer(destinations)
     print("")
     print("We're sorry. How about " + destination_result + " ?")
     print("")
     destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
     if destination_choice == "Yes":
         return destination_result
-
+        
     else:
-        destination_confirmation(destinations_list)
+        destination_confirmation(destinations)
+        
 
 def entertainment_confirmation(entertainments_list):
     entertainment_result = entertainments_randomizer(entertainments)
@@ -80,7 +81,7 @@ print("We have selected " + destination_result + " as your destination.")
 print("")
 destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-while destination_choice != "Yes":
+if destination_choice != "Yes":
     destination_result = destinations_randomizer(destinations)
     print("")
     print("We're sorry. How about " + destination_result + " ?")
@@ -97,7 +98,7 @@ print("We have selected " + entertainment_result + " as your entertainment.")
 print("")
 entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-while entertainment_choice != "Yes":
+if entertainment_choice != "Yes":
     entertainment_result = entertainments_randomizer(entertainments)
     print("")
     print("We're sorry. How about " + entertainment_result + " ?")
@@ -114,7 +115,7 @@ print("We have selected " + mode_of_transportation_result + " as your mode of tr
 print("")
 mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-while mode_of_transportation_choice != "Yes":
+if mode_of_transportation_choice != "Yes":
     mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
     print("")
     print("We're sorry. How about " + mode_of_transportation_result + " ?")
@@ -131,7 +132,7 @@ print("We have selected " + restaurant_result + " as your dining option.")
 print("")
 restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-while restaurant_choice != "Yes":
+if restaurant_choice != "Yes":
     restaurant_result = restaurants_randomizer(restaurants)
     print("")
     print("We're sorry. How about " + restaurant_result + " ?")
@@ -237,9 +238,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
 
     else:
         print("")
-        print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + " by " + \
-            mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + \
-                "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
+        print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + " by " + mode_of_transportation_result + " where you will spend the day " + entertainment_result + ". " + "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
         return [destination_result, entertainment_result, mode_of_transportation_result, restaurant_result]
