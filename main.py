@@ -120,16 +120,19 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             print("")
             destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if destination_choice != "Yes":
-                destination_result = destinations_randomizer(destinations)
-                print("")
-                print("We're sorry. How about " + destination_result + " ?")
-                print("")
-                destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
-            else:
-                print("")
-                print("Congratulations on choosing your destination. Let's move on.")
-                print("")
+            def destination_correction(destination_choice):
+                if destination_choice != "Yes":
+                    destination_result = destinations_randomizer(destinations)
+                    print("")
+                    print("We're sorry. How about " + destination_result + " ?")
+                    print("")
+                    destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                else:
+                    print("")
+                    print("Congratulations on choosing your destination. Let's move on.")
+                    print("")
+                    destination_correction(destination_choice)
+                    return[destination_choice]
 
         elif user_correction == "2":
             entertainment_result = entertainments_randomizer(entertainments)
