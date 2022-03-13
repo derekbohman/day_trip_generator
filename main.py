@@ -105,19 +105,23 @@ print("    Entertainment: " + entertainment_result)
 print("    Mode of transportation: " + mode_of_transportation_result)
 print("    Restaurant: " + restaurant_result)
 print("")
-begin = 1
 
+def begin(x):
+    return x + 1
 
 def user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result):
-    print(begin)
-    begin += 1
+    count = begin(0)
+    print(count)
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
+    print(begin(count))
     if user_confirmation == "No":
+        print(begin(count))
         print("")
         user_correction = input("Which option would you like to change? You can type in\
         '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant. ")
 
         if user_correction == "1":
+            print(begin(count))
             destination_result = destinations_randomizer(destinations)
             print("")
             print("We have selected " + destination_result + " as your destination.")
