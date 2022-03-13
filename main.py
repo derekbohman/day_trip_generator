@@ -105,8 +105,12 @@ print("    Entertainment: " + entertainment_result)
 print("    Mode of transportation: " + mode_of_transportation_result)
 print("    Restaurant: " + restaurant_result)
 print("")
+begin = 1
+
 
 def user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result):
+    print(begin)
+    begin += 1
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
     if user_confirmation == "No":
         print("")
