@@ -206,7 +206,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
         return [destination_result, entertainment_result, mode_of_transportation_result, restaurant_result]
-# final_results = user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
+final_results = user_confirmation_function(destination_result, entertainment_result, mode_of_transportation_result, restaurant_result)
 
 # print(destination_result)
 # print(entertainment_result)
