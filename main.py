@@ -110,10 +110,11 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
     if user_confirmation == "No":
         print("")
-        user_correction = input("Which option would you like to change? You can type in \
+        user_correction = input("Which option would you like to change? You can type in\
         '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant. ")
 
         if user_correction == "1":
+            destination_result = destinations_randomizer(destinations)
             print("")
             print("We have selected " + destination_result + " as your destination.")
             print("")
@@ -131,6 +132,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("")
 
         elif user_correction == "2":
+            entertainment_result = entertainments_randomizer(entertainments)
             print("")
             print("We have selected " + entertainment_result + " as your entertainment.")
             print("")
@@ -148,6 +150,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("")
 
         elif user_correction == "3":
+            mode_of_transportation_choice = modes_of_transportation_randomizer(modes_of_transportation)
             print("")
             print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
             print("")
@@ -165,6 +168,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("")
 
         elif user_correction == "4":
+            restaurant_result = restaurants_randomizer(restaurants)
             print("")
             print("We have selected " + restaurant_result + " as your destination.")
             print("")
