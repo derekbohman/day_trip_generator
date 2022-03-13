@@ -161,7 +161,7 @@ def restaurant_choice_function(restaurant_choice):
         else:
             print("")
             print("Congratulations on choosing your dining option. Let's move on.")
-            print("")   
+            print("")
     else:
         print("")
         print("Congratulations on choosing your dining option. Let's move on.")
@@ -184,8 +184,8 @@ def user_confirmation_function(destination_result, entertainment_result, transpo
     user_confirmation = input("Type 'Yes' to confirm or 'No' to make changes. ")
     if user_confirmation == "No":
         print("")
-        user_correction = input("Which option would you like to change?" \
-            "Type '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant. ")
+        user_correction = input("Which option would you like to change?"\
+            " Type '1' for Destination, '2' for Entertainment, '3' for Mode of transportation, or '4' for Restaurant. ")
 
         if user_correction == "1":
             destination_result = destinations_randomizer(destinations_list)
@@ -195,12 +195,11 @@ def user_confirmation_function(destination_result, entertainment_result, transpo
             destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if destination_choice != "Yes":
-                destination_result = destination_confirmation(destinations_list)   
+                destination_result = destination_confirmation(destinations_list)
             else:
                 print("")
                 print("Congratulations on choosing your destination. Let's move on.")
                 print("")
-                return destination_result
 
         elif user_correction == "2":
             entertainment_result = entertainments_randomizer(entertainments_list)
@@ -258,7 +257,9 @@ def user_confirmation_function(destination_result, entertainment_result, transpo
         user_confirmation_function(destination_result, entertainment_result, transportation_result, restaurant_result)
     else:
         print("")
-        print("Get ready for the adventure of a lifetime. You will be arriving in " + destination_result + " by " + transportation_result + " where you will spend the day " + entertainment_result + ". " + "You will end the day by enjoying a wonderful " + restaurant_result + " meal.")
+        print(f"Get ready for the adventure of a lifetime. You will be arriving in {destination_result} by \
+            {transportation_result} where you will spend the day {entertainment_result}. \
+                You will end the day by enjoying a wonderful {restaurant_result} meal.")
         print("")
         print("Thank you for using the devCodeCamp Day Trip Planner")
         #return [destination_result, entertainment_result, transportation_result, restaurant_result]
