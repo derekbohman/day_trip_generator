@@ -35,6 +35,39 @@ def destination_confirmation(destinations_list):
     else:
         destination_confirmation(destinations_list)
 
+def entertainment_confirmation(entertainments_list):
+    entertainment_result = entertainments_randomizer(entertainments)
+    print("")
+    print("We're sorry. How about " + entertainment_result + " ?")
+    print("")
+    entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+    if entertainment_choice == "Yes":
+        return entertainment_result
+
+    else:
+        entertainment_confirmation(entertainments_list)
+
+def mode_of_transportation_confirmation(modes_of_transportation_list):
+    mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
+    print("")
+    print("We're sorry. How about " + mode_of_transportation_result + " ?")
+    print("")
+    mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+    if mode_of_transportation_choice == "Yes":
+        return mode_of_transportation_result
+
+    else:
+        mode_of_transportation_confirmation(modes_of_transportation_list)
+
+def restaurant_confirmation(restaurants_list):
+    restaurant_result = restaurants_randomizer(restaurants)
+    print("")
+    print("We're sorry. How about " + restaurant_result + " ?")
+    print("")
+    restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+    if restaurant_choice == "Yes":
+        return restaurant_result
+
 destination_result = destinations_randomizer(destinations)
 entertainment_result = entertainments_randomizer(entertainments)
 mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
@@ -53,6 +86,7 @@ while destination_choice != "Yes":
     print("We're sorry. How about " + destination_result + " ?")
     print("")
     destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
 else:
     print("")
     print("Congratulations on choosing your destination. Let's move on.")
@@ -69,6 +103,7 @@ while entertainment_choice != "Yes":
     print("We're sorry. How about " + entertainment_result + " ?")
     print("")
     entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
 else:
     print("")
     print("Congratulations on choosing your entertainment. Let's move on.")
@@ -85,6 +120,7 @@ while mode_of_transportation_choice != "Yes":
     print("We're sorry. How about " + mode_of_transportation_result + " ?")
     print("")
     mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
 else:
     print("")
     print("Congratulations on choosing your mode of transportation. Let's move on.")
@@ -101,6 +137,7 @@ while restaurant_choice != "Yes":
     print("We're sorry. How about " + restaurant_result + " ?")
     print("")
     restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+
 else:
     print("")
     print("Congratulations on choosing your dining option. Let's move on.")
@@ -133,8 +170,8 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             destination_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if destination_choice != "Yes":
-                destination_result = destination_confirmation(destinations)
-                   
+                destination_result = destination_confirmation(destinations)   
+           
             else:
                 print("")
                 print("Congratulations on choosing your destination. Let's move on.")
@@ -148,11 +185,8 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if entertainment_choice != "Yes":
-                entertainment_result = entertainments_randomizer(entertainments)
-                print("")
-                print("We're sorry. How about " + entertainment_result + " ?")
-                print("")
-                entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                entertainment_result = entertainment_confirmation(entertainments)
+           
             else:
                 print("")
                 print("Congratulations on choosing your entertainment. Let's move on.")
@@ -166,11 +200,8 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if mode_of_transportation_choice != "Yes":
-                mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
-                print("")
-                print("We're sorry. How about " + mode_of_transportation_result + " ?")
-                print("")
-                mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                mode_of_transportation_result = mode_of_transportation_confirmation(modes_of_transportation)
+            
             else:
                 print("")
                 print("Congratulations on choosing your mode of transportation. Let's move on.")
@@ -184,11 +215,8 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
             if restaurant_choice != "Yes":
-                restaurant_result = restaurants_randomizer(restaurants)
-                print("")
-                print("We're sorry. How about " + restaurant_result + " ?")
-                print("")
-                restaurant_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
+                restaurant_result = restaurant_confirmation(restaurants)
+
             else:
                 print("")
                 print("Congratulations on choosing your restaurant. Let's move on.")
