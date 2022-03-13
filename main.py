@@ -138,7 +138,7 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
             print("")
             entertainment_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if entertainment_result != "Yes":
+            if entertainment_choice != "Yes":
                 entertainment_result = entertainments_randomizer(entertainments)
                 print("")
                 print("We're sorry. How about " + entertainment_result + " ?")
@@ -150,14 +150,14 @@ def user_confirmation_function(destination_result, entertainment_result, mode_of
                 print("")
 
         elif user_correction == "3":
-            mode_of_transportation_choice = modes_of_transportation_randomizer(modes_of_transportation)
+            mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
             print("")
             print("We have selected " + mode_of_transportation_result + " as your mode of transportation.")
             print("")
             mode_of_transportation_choice = input("Type 'Yes if you agree or 'No' if you disagree. ")
 
-            if mode_of_transportation_result != "Yes":
-                mode_of_transportation_choice = modes_of_transportation_randomizer(modes_of_transportation)
+            if mode_of_transportation_choice != "Yes":
+                mode_of_transportation_result = modes_of_transportation_randomizer(modes_of_transportation)
                 print("")
                 print("We're sorry. How about " + mode_of_transportation_result + " ?")
                 print("")
